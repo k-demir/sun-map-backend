@@ -4,3 +4,8 @@ assets/raw_map_images/*
 assets/raw_heightmaps/*
 
 .DS_Store
+
+debug/
+target/
+**/*.rs.bk
+*.pdb
