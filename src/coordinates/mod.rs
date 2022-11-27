@@ -4,7 +4,8 @@ mod services;
 
 pub use routes::get_tile_information;
 
-use coordinates::TILE_SIZE;
+pub use coordinates::TILE_SIZE;
+pub use coordinates::TileCoordinates;
 use coordinates::Coordinates;
 use coordinates::transform;
 use coordinates::get_tile_coordinates;

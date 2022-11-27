@@ -85,7 +85,7 @@ def crop_heightmap(file_path: str, destination: str) -> None:
         for i in range(0, IMG_SIZE, TILE_SIZE):
             for j in range(0, IMG_SIZE, TILE_SIZE):
                 cropped_array = heightmap_array[j:j+TILE_SIZE, i:i+TILE_SIZE]
-                json_data = json.dumps(cropped_array.tolist(), indent=2)
+                json_data = json.dumps(cropped_array.tolist())
                 encoded_json = json_data.encode('utf-8')
                 with open(os.path.join(destination, f'{x + 2*i}x{y - 2*j}'),
                           'wb') as tile_file:
@@ -122,7 +122,7 @@ def crop_data(image_source: str, image_destination: str,
     if verbose:
         print('Cropping heightmaps...')
     create_cropped_heightmaps(heightmap_source, heightmap_destination)
-    
+
     if remove_unnecessary_files:
         if verbose:
             print('Removing unnecessary files...')

@@ -4,6 +4,7 @@ use env_logger::Env;
 use actix_files::Files;
 
 mod coordinates;
+mod shadows;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
