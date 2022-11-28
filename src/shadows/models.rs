@@ -8,7 +8,7 @@ use crate::coordinates;
 #[derive(serde::Deserialize, Debug)]
 #[serde(transparent)]
 pub struct Heightmap {
-    data: Vec<Vec<i32>>,
+    pub data: Vec<Vec<i32>>,
 }
 
 pub fn load_heightmap(

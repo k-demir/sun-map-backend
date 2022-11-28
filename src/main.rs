@@ -20,6 +20,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(Logger::default())
             .wrap(cors)
             .service(coordinates::get_tile_information)
+            .service(shadows::get_shadows)
             .service(Files::new("/api/tiles", "./assets/map_images"))
     })
     .bind(("127.0.0.1", 8888))?
